@@ -1,0 +1,1704 @@
+TimeQuest Timing Analyzer report for clock
+Sat Oct 05 15:29:59 2019
+Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 11. Slow 1200mV 85C Model Setup: 'clk'
+ 12. Slow 1200mV 85C Model Hold: 'clk'
+ 13. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Slow 1200mV 85C Model Metastability Report
+ 19. Slow 1200mV 0C Model Fmax Summary
+ 20. Slow 1200mV 0C Model Setup Summary
+ 21. Slow 1200mV 0C Model Hold Summary
+ 22. Slow 1200mV 0C Model Recovery Summary
+ 23. Slow 1200mV 0C Model Removal Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Slow 1200mV 0C Model Setup: 'clk'
+ 26. Slow 1200mV 0C Model Hold: 'clk'
+ 27. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Slow 1200mV 0C Model Metastability Report
+ 33. Fast 1200mV 0C Model Setup Summary
+ 34. Fast 1200mV 0C Model Hold Summary
+ 35. Fast 1200mV 0C Model Recovery Summary
+ 36. Fast 1200mV 0C Model Removal Summary
+ 37. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 38. Fast 1200mV 0C Model Setup: 'clk'
+ 39. Fast 1200mV 0C Model Hold: 'clk'
+ 40. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Fast 1200mV 0C Model Metastability Report
+ 46. Multicorner Timing Analysis Summary
+ 47. Setup Times
+ 48. Hold Times
+ 49. Clock to Output Times
+ 50. Minimum Clock to Output Times
+ 51. Board Trace Model Assignments
+ 52. Input Transition Times
+ 53. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 54. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 55. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Report TCCS
+ 59. Report RSKM
+ 60. Unconstrained Paths
+ 61. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 10.0 Build 218 06/27/2010 SJ Web Edition ;
+; Revision Name      ; clock                                            ;
+; Device Family      ; Cyclone IV E                                     ;
+; Device Name        ; EP4CE115F29C7                                    ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Enabled                                          ;
++--------------------+--------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 167.39 MHz ; 167.39 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -4.974 ; -425.819           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.384 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -143.065                         ;
++-------+--------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                     ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -4.974 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.887      ;
+; -4.967 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.880      ;
+; -4.932 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.851      ;
+; -4.906 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.825      ;
+; -4.904 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.823      ;
+; -4.900 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.827      ;
+; -4.893 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.812      ;
+; -4.893 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.820      ;
+; -4.873 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.792      ;
+; -4.867 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.786      ;
+; -4.862 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.781      ;
+; -4.842 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.755      ;
+; -4.835 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.748      ;
+; -4.823 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.736      ;
+; -4.816 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.729      ;
+; -4.812 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.731      ;
+; -4.809 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.722      ;
+; -4.807 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.720      ;
+; -4.800 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.719      ;
+; -4.800 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.713      ;
+; -4.781 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.700      ;
+; -4.774 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.693      ;
+; -4.772 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.691      ;
+; -4.768 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.695      ;
+; -4.761 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.680      ;
+; -4.761 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.688      ;
+; -4.755 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.674      ;
+; -4.753 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.672      ;
+; -4.750 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.663      ;
+; -4.749 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.676      ;
+; -4.742 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.661      ;
+; -4.742 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.669      ;
+; -4.741 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.660      ;
+; -4.735 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.654      ;
+; -4.733 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.660      ;
+; -4.732 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.659      ;
+; -4.730 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.649      ;
+; -4.722 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.641      ;
+; -4.716 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.635      ;
+; -4.711 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.630      ;
+; -4.710 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.623      ;
+; -4.709 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.636      ;
+; -4.703 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.616      ;
+; -4.697 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.610      ;
+; -4.697 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.616      ;
+; -4.691 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.604      ;
+; -4.689 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.602      ;
+; -4.688 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.601      ;
+; -4.686 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.613      ;
+; -4.684 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.597      ;
+; -4.680 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.599      ;
+; -4.677 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.590      ;
+; -4.675 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.588      ;
+; -4.668 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.587      ;
+; -4.668 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.581      ;
+; -4.656 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.575      ;
+; -4.655 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.568      ;
+; -4.649 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.568      ;
+; -4.647 ; Verilog4:inst2|counter[19] ; inst                       ; clk          ; clk         ; 1.000        ; -0.116     ; 5.529      ;
+; -4.645 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.572      ;
+; -4.642 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.561      ;
+; -4.640 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.559      ;
+; -4.638 ; Verilog4:inst2|counter[22] ; inst                       ; clk          ; clk         ; 1.000        ; -0.116     ; 5.520      ;
+; -4.636 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.563      ;
+; -4.630 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.549      ;
+; -4.629 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.548      ;
+; -4.629 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.556      ;
+; -4.627 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.540      ;
+; -4.625 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 5.542      ;
+; -4.623 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.542      ;
+; -4.621 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.540      ;
+; -4.620 ; Verilog4:inst7|counter[4]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.547      ;
+; -4.618 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.531      ;
+; -4.617 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.544      ;
+; -4.616 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.081     ; 5.533      ;
+; -4.615 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.542      ;
+; -4.610 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.529      ;
+; -4.610 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.537      ;
+; -4.609 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.536      ;
+; -4.609 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.528      ;
+; -4.603 ; Verilog4:inst1|counter[6]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.516      ;
+; -4.603 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.522      ;
+; -4.601 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.528      ;
+; -4.600 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.527      ;
+; -4.600 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.527      ;
+; -4.599 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.526      ;
+; -4.599 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.512      ;
+; -4.599 ; Verilog4:inst1|counter[4]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.512      ;
+; -4.598 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.517      ;
+; -4.590 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.509      ;
+; -4.588 ; Verilog4:inst8|counter[19] ; Verilog4:inst8|counter[25] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.506      ;
+; -4.584 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.503      ;
+; -4.581 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.494      ;
+; -4.579 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.498      ;
+; -4.579 ; Verilog4:inst8|counter[22] ; Verilog4:inst8|counter[25] ; clk          ; clk         ; 1.000        ; -0.080     ; 5.497      ;
+; -4.578 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.491      ;
+; -4.577 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.504      ;
+; -4.571 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.484      ;
+; -4.568 ; Verilog4:inst1|counter[18] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.079     ; 5.487      ;
+; -4.565 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.085     ; 5.478      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                     ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.384 ; inst6                      ; inst6                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.384 ; inst5                      ; inst5                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.384 ; inst4                      ; inst4                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.384 ; inst3                      ; inst3                      ; clk          ; clk         ; 0.000        ; 0.079      ; 0.669      ;
+; 0.421 ; Verilog4:inst2|counter[25] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.708      ;
+; 0.422 ; Verilog4:inst8|counter[25] ; Verilog4:inst8|counter[25] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.708      ;
+; 0.423 ; Verilog4:inst7|counter[25] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.708      ;
+; 0.423 ; Verilog4:inst1|counter[25] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.708      ;
+; 0.621 ; Verilog4:inst2|counter[13] ; Verilog4:inst2|counter[13] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.908      ;
+; 0.622 ; Verilog4:inst8|counter[13] ; Verilog4:inst8|counter[13] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.622 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[19] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.909      ;
+; 0.622 ; Verilog4:inst2|counter[16] ; Verilog4:inst2|counter[16] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.909      ;
+; 0.622 ; Verilog4:inst2|counter[15] ; Verilog4:inst2|counter[15] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.909      ;
+; 0.622 ; Verilog4:inst2|counter[10] ; Verilog4:inst2|counter[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.622 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[12] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.622 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[10] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.908      ;
+; 0.623 ; Verilog4:inst8|counter[19] ; Verilog4:inst8|counter[19] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst8|counter[16] ; Verilog4:inst8|counter[16] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst8|counter[15] ; Verilog4:inst8|counter[15] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst8|counter[10] ; Verilog4:inst8|counter[10] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.908      ;
+; 0.623 ; Verilog4:inst2|counter[18] ; Verilog4:inst2|counter[18] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.910      ;
+; 0.623 ; Verilog4:inst2|counter[17] ; Verilog4:inst2|counter[17] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.910      ;
+; 0.623 ; Verilog4:inst2|counter[9]  ; Verilog4:inst2|counter[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst2|counter[8]  ; Verilog4:inst2|counter[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.623 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.909      ;
+; 0.624 ; Verilog4:inst7|counter[16] ; Verilog4:inst7|counter[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst7|counter[15] ; Verilog4:inst7|counter[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[12] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.908      ;
+; 0.624 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[11] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.908      ;
+; 0.624 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[10] ; clk          ; clk         ; 0.000        ; 0.078      ; 0.908      ;
+; 0.624 ; Verilog4:inst8|counter[18] ; Verilog4:inst8|counter[18] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
+; 0.624 ; Verilog4:inst8|counter[17] ; Verilog4:inst8|counter[17] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
+; 0.624 ; Verilog4:inst8|counter[9]  ; Verilog4:inst8|counter[9]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst8|counter[8]  ; Verilog4:inst8|counter[8]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst2|counter[21] ; Verilog4:inst2|counter[21] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.911      ;
+; 0.624 ; Verilog4:inst2|counter[7]  ; Verilog4:inst2|counter[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
+; 0.624 ; Verilog4:inst1|counter[16] ; Verilog4:inst1|counter[16] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst1|counter[15] ; Verilog4:inst1|counter[15] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.909      ;
+; 0.624 ; Verilog4:inst1|counter[7]  ; Verilog4:inst1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.910      ;
+; 0.625 ; Verilog4:inst7|counter[18] ; Verilog4:inst7|counter[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.910      ;
+; 0.625 ; Verilog4:inst7|counter[17] ; Verilog4:inst7|counter[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.910      ;
+; 0.625 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[9]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.909      ;
+; 0.625 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[8]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.909      ;
+; 0.625 ; Verilog4:inst8|counter[21] ; Verilog4:inst8|counter[21] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
+; 0.625 ; Verilog4:inst8|counter[14] ; Verilog4:inst8|counter[14] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.911      ;
+; 0.625 ; Verilog4:inst8|counter[7]  ; Verilog4:inst8|counter[7]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.910      ;
+; 0.625 ; Verilog4:inst1|counter[18] ; Verilog4:inst1|counter[18] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.910      ;
+; 0.625 ; Verilog4:inst1|counter[17] ; Verilog4:inst1|counter[17] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.910      ;
+; 0.626 ; Verilog4:inst7|counter[7]  ; Verilog4:inst7|counter[7]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.910      ;
+; 0.627 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.914      ;
+; 0.628 ; Verilog4:inst8|counter[22] ; Verilog4:inst8|counter[22] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.914      ;
+; 0.628 ; Verilog4:inst2|counter[20] ; Verilog4:inst2|counter[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.915      ;
+; 0.629 ; Verilog4:inst8|counter[20] ; Verilog4:inst8|counter[20] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.915      ;
+; 0.635 ; Verilog4:inst2|counter[0]  ; Verilog4:inst2|counter[0]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.921      ;
+; 0.636 ; Verilog4:inst8|counter[0]  ; Verilog4:inst8|counter[0]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.921      ;
+; 0.636 ; Verilog4:inst2|counter[3]  ; Verilog4:inst2|counter[3]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.922      ;
+; 0.637 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[0]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.921      ;
+; 0.637 ; Verilog4:inst8|counter[3]  ; Verilog4:inst8|counter[3]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.922      ;
+; 0.637 ; Verilog4:inst2|counter[12] ; Verilog4:inst2|counter[12] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.923      ;
+; 0.637 ; Verilog4:inst2|counter[11] ; Verilog4:inst2|counter[11] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.923      ;
+; 0.638 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[13] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst8|counter[12] ; Verilog4:inst8|counter[12] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst8|counter[11] ; Verilog4:inst8|counter[11] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst2|counter[5]  ; Verilog4:inst2|counter[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.924      ;
+; 0.638 ; Verilog4:inst2|counter[2]  ; Verilog4:inst2|counter[2]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.924      ;
+; 0.638 ; Verilog4:inst2|counter[1]  ; Verilog4:inst2|counter[1]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.924      ;
+; 0.638 ; Verilog4:inst2|counter[24] ; Verilog4:inst2|counter[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.925      ;
+; 0.638 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[13] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.923      ;
+; 0.638 ; Verilog4:inst1|counter[5]  ; Verilog4:inst1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.924      ;
+; 0.639 ; Verilog4:inst8|counter[5]  ; Verilog4:inst8|counter[5]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.924      ;
+; 0.639 ; Verilog4:inst8|counter[2]  ; Verilog4:inst8|counter[2]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.924      ;
+; 0.639 ; Verilog4:inst8|counter[1]  ; Verilog4:inst8|counter[1]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.924      ;
+; 0.639 ; Verilog4:inst8|counter[24] ; Verilog4:inst8|counter[24] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.925      ;
+; 0.639 ; Verilog4:inst2|counter[23] ; Verilog4:inst2|counter[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.926      ;
+; 0.639 ; Verilog4:inst2|counter[14] ; Verilog4:inst2|counter[14] ; clk          ; clk         ; 0.000        ; 0.081      ; 0.926      ;
+; 0.640 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[5]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.924      ;
+; 0.640 ; Verilog4:inst7|counter[24] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.925      ;
+; 0.640 ; Verilog4:inst8|counter[23] ; Verilog4:inst8|counter[23] ; clk          ; clk         ; 0.000        ; 0.080      ; 0.926      ;
+; 0.640 ; Verilog4:inst1|counter[24] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.925      ;
+; 0.641 ; Verilog4:inst7|counter[23] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[14] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst2|counter[6]  ; Verilog4:inst2|counter[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
+; 0.641 ; Verilog4:inst2|counter[4]  ; Verilog4:inst2|counter[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
+; 0.641 ; Verilog4:inst1|counter[23] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[14] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.926      ;
+; 0.641 ; Verilog4:inst1|counter[6]  ; Verilog4:inst1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
+; 0.641 ; Verilog4:inst1|counter[4]  ; Verilog4:inst1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.080      ; 0.927      ;
+; 0.642 ; Verilog4:inst8|counter[6]  ; Verilog4:inst8|counter[6]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.927      ;
+; 0.642 ; Verilog4:inst8|counter[4]  ; Verilog4:inst8|counter[4]  ; clk          ; clk         ; 0.000        ; 0.079      ; 0.927      ;
+; 0.643 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.928      ;
+; 0.643 ; Verilog4:inst7|counter[20] ; Verilog4:inst7|counter[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.928      ;
+; 0.643 ; Verilog4:inst7|counter[6]  ; Verilog4:inst7|counter[6]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.927      ;
+; 0.643 ; Verilog4:inst7|counter[4]  ; Verilog4:inst7|counter[4]  ; clk          ; clk         ; 0.000        ; 0.078      ; 0.927      ;
+; 0.643 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.928      ;
+; 0.643 ; Verilog4:inst1|counter[20] ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 0.000        ; 0.079      ; 0.928      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                      ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type       ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate  ; clk   ; Rise       ; clk                        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[4]  ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; x0        ; clk        ; 2.589 ; 2.904 ; Rise       ; clk             ;
+; x1        ; clk        ; 1.613 ; 1.938 ; Rise       ; clk             ;
+; x2        ; clk        ; 1.340 ; 1.669 ; Rise       ; clk             ;
+; x3        ; clk        ; 2.601 ; 2.940 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; x0        ; clk        ; -1.791 ; -2.095 ; Rise       ; clk             ;
+; x1        ; clk        ; -1.172 ; -1.483 ; Rise       ; clk             ;
+; x2        ; clk        ; -0.588 ; -0.913 ; Rise       ; clk             ;
+; x3        ; clk        ; -1.832 ; -2.157 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 9.634 ; 9.704 ; Rise       ; clk             ;
+; s0        ; clk        ; 7.729 ; 7.700 ; Rise       ; clk             ;
+; s1        ; clk        ; 7.706 ; 7.650 ; Rise       ; clk             ;
+; s2        ; clk        ; 9.016 ; 8.973 ; Rise       ; clk             ;
+; s3        ; clk        ; 8.361 ; 8.345 ; Rise       ; clk             ;
+; s4        ; clk        ; 9.722 ; 9.653 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 9.295 ; 9.364 ; Rise       ; clk             ;
+; s0        ; clk        ; 7.465 ; 7.437 ; Rise       ; clk             ;
+; s1        ; clk        ; 7.444 ; 7.389 ; Rise       ; clk             ;
+; s2        ; clk        ; 8.704 ; 8.661 ; Rise       ; clk             ;
+; s3        ; clk        ; 8.076 ; 8.059 ; Rise       ; clk             ;
+; s4        ; clk        ; 9.380 ; 9.312 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 187.83 MHz ; 187.83 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -4.324 ; -370.091          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.335 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -143.065                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -4.324 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.246      ;
+; -4.317 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.239      ;
+; -4.272 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.200      ;
+; -4.262 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.191      ;
+; -4.260 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.195      ;
+; -4.254 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.182      ;
+; -4.253 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.188      ;
+; -4.250 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.179      ;
+; -4.238 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.166      ;
+; -4.231 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.160      ;
+; -4.225 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.153      ;
+; -4.216 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.145      ;
+; -4.208 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.130      ;
+; -4.204 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.132      ;
+; -4.201 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.123      ;
+; -4.191 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.120      ;
+; -4.179 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.101      ;
+; -4.179 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.101      ;
+; -4.179 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.101      ;
+; -4.177 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.099      ;
+; -4.172 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.101      ;
+; -4.172 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.094      ;
+; -4.171 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.093      ;
+; -4.164 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.086      ;
+; -4.159 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.087      ;
+; -4.156 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.084      ;
+; -4.154 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.082      ;
+; -4.146 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.075      ;
+; -4.144 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.079      ;
+; -4.139 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.061      ;
+; -4.138 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.066      ;
+; -4.137 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.072      ;
+; -4.134 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.063      ;
+; -4.128 ; Verilog4:inst2|counter[22] ; inst                       ; clk          ; clk         ; 1.000        ; -0.108     ; 5.019      ;
+; -4.127 ; Verilog4:inst2|counter[19] ; inst                       ; clk          ; clk         ; 1.000        ; -0.108     ; 5.018      ;
+; -4.122 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.050      ;
+; -4.120 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.042      ;
+; -4.119 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.048      ;
+; -4.115 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.050      ;
+; -4.115 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.044      ;
+; -4.115 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.050      ;
+; -4.115 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.050      ;
+; -4.114 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.049      ;
+; -4.111 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.039      ;
+; -4.109 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.037      ;
+; -4.108 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.043      ;
+; -4.101 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.036      ;
+; -4.100 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.029      ;
+; -4.097 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.032      ;
+; -4.092 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.014      ;
+; -4.090 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 5.025      ;
+; -4.088 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.071     ; 5.016      ;
+; -4.085 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.007      ;
+; -4.078 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.000      ;
+; -4.077 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.999      ;
+; -4.076 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.005      ;
+; -4.075 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.070     ; 5.004      ;
+; -4.063 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.985      ;
+; -4.063 ; Verilog4:inst2|counter[11] ; inst                       ; clk          ; clk         ; 1.000        ; -0.107     ; 4.955      ;
+; -4.063 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.985      ;
+; -4.063 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.985      ;
+; -4.061 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.983      ;
+; -4.057 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.992      ;
+; -4.056 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.985      ;
+; -4.056 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.978      ;
+; -4.055 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.977      ;
+; -4.053 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.981      ;
+; -4.052 ; Verilog4:inst2|counter[12] ; inst                       ; clk          ; clk         ; 1.000        ; -0.107     ; 4.944      ;
+; -4.048 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.970      ;
+; -4.047 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.969      ;
+; -4.046 ; Verilog4:inst2|counter[20] ; inst                       ; clk          ; clk         ; 1.000        ; -0.108     ; 4.937      ;
+; -4.043 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.971      ;
+; -4.040 ; Verilog4:inst2|counter[16] ; inst                       ; clk          ; clk         ; 1.000        ; -0.108     ; 4.931      ;
+; -4.040 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.968      ;
+; -4.039 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.961      ;
+; -4.038 ; Verilog4:inst7|counter[4]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.973      ;
+; -4.038 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.966      ;
+; -4.033 ; Verilog4:inst2|counter[15] ; inst                       ; clk          ; clk         ; 1.000        ; -0.108     ; 4.924      ;
+; -4.031 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.960      ;
+; -4.030 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.959      ;
+; -4.028 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.950      ;
+; -4.028 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.963      ;
+; -4.026 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.961      ;
+; -4.023 ; Verilog4:inst1|counter[4]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.945      ;
+; -4.023 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.945      ;
+; -4.022 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.950      ;
+; -4.021 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.956      ;
+; -4.018 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.947      ;
+; -4.013 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.940      ;
+; -4.013 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.948      ;
+; -4.010 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.945      ;
+; -4.006 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.071     ; 4.934      ;
+; -4.004 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.077     ; 4.926      ;
+; -4.004 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.072     ; 4.931      ;
+; -4.003 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.932      ;
+; -4.001 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.936      ;
+; -3.999 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.934      ;
+; -3.999 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.070     ; 4.928      ;
+; -3.999 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.934      ;
+; -3.999 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.064     ; 4.934      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.335 ; inst6                      ; inst6                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
+; 0.335 ; inst5                      ; inst5                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
+; 0.335 ; inst4                      ; inst4                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
+; 0.335 ; inst3                      ; inst3                      ; clk          ; clk         ; 0.000        ; 0.071      ; 0.597      ;
+; 0.380 ; Verilog4:inst2|counter[25] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.643      ;
+; 0.381 ; Verilog4:inst8|counter[25] ; Verilog4:inst8|counter[25] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.643      ;
+; 0.381 ; Verilog4:inst1|counter[25] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.643      ;
+; 0.382 ; Verilog4:inst7|counter[25] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.643      ;
+; 0.566 ; Verilog4:inst8|counter[10] ; Verilog4:inst8|counter[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.828      ;
+; 0.566 ; Verilog4:inst2|counter[10] ; Verilog4:inst2|counter[10] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.829      ;
+; 0.566 ; Verilog4:inst2|counter[8]  ; Verilog4:inst2|counter[8]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.829      ;
+; 0.566 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[12] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.828      ;
+; 0.566 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[10] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.828      ;
+; 0.567 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[12] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.828      ;
+; 0.567 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[10] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.828      ;
+; 0.567 ; Verilog4:inst8|counter[16] ; Verilog4:inst8|counter[16] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.829      ;
+; 0.567 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[19] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
+; 0.567 ; Verilog4:inst2|counter[18] ; Verilog4:inst2|counter[18] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
+; 0.567 ; Verilog4:inst2|counter[16] ; Verilog4:inst2|counter[16] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
+; 0.567 ; Verilog4:inst2|counter[13] ; Verilog4:inst2|counter[13] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.830      ;
+; 0.567 ; Verilog4:inst1|counter[16] ; Verilog4:inst1|counter[16] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.829      ;
+; 0.568 ; Verilog4:inst7|counter[16] ; Verilog4:inst7|counter[16] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.829      ;
+; 0.568 ; Verilog4:inst8|counter[19] ; Verilog4:inst8|counter[19] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
+; 0.568 ; Verilog4:inst8|counter[13] ; Verilog4:inst8|counter[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
+; 0.568 ; Verilog4:inst8|counter[8]  ; Verilog4:inst8|counter[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
+; 0.568 ; Verilog4:inst2|counter[15] ; Verilog4:inst2|counter[15] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.831      ;
+; 0.568 ; Verilog4:inst2|counter[9]  ; Verilog4:inst2|counter[9]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.831      ;
+; 0.568 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.830      ;
+; 0.569 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[11] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.830      ;
+; 0.569 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[8]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.830      ;
+; 0.569 ; Verilog4:inst8|counter[18] ; Verilog4:inst8|counter[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.569 ; Verilog4:inst8|counter[15] ; Verilog4:inst8|counter[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.569 ; Verilog4:inst8|counter[9]  ; Verilog4:inst8|counter[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.569 ; Verilog4:inst2|counter[17] ; Verilog4:inst2|counter[17] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.832      ;
+; 0.569 ; Verilog4:inst2|counter[7]  ; Verilog4:inst2|counter[7]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.832      ;
+; 0.569 ; Verilog4:inst1|counter[18] ; Verilog4:inst1|counter[18] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.569 ; Verilog4:inst1|counter[15] ; Verilog4:inst1|counter[15] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.569 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.831      ;
+; 0.570 ; Verilog4:inst7|counter[18] ; Verilog4:inst7|counter[18] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.831      ;
+; 0.570 ; Verilog4:inst7|counter[15] ; Verilog4:inst7|counter[15] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.831      ;
+; 0.570 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[9]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.831      ;
+; 0.570 ; Verilog4:inst8|counter[17] ; Verilog4:inst8|counter[17] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.570 ; Verilog4:inst8|counter[14] ; Verilog4:inst8|counter[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.570 ; Verilog4:inst8|counter[7]  ; Verilog4:inst8|counter[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.570 ; Verilog4:inst2|counter[21] ; Verilog4:inst2|counter[21] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.833      ;
+; 0.570 ; Verilog4:inst1|counter[17] ; Verilog4:inst1|counter[17] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.570 ; Verilog4:inst1|counter[7]  ; Verilog4:inst1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.832      ;
+; 0.571 ; Verilog4:inst7|counter[17] ; Verilog4:inst7|counter[17] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.832      ;
+; 0.571 ; Verilog4:inst7|counter[7]  ; Verilog4:inst7|counter[7]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.832      ;
+; 0.571 ; Verilog4:inst8|counter[21] ; Verilog4:inst8|counter[21] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.833      ;
+; 0.572 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[22] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.835      ;
+; 0.572 ; Verilog4:inst2|counter[20] ; Verilog4:inst2|counter[20] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.835      ;
+; 0.573 ; Verilog4:inst8|counter[22] ; Verilog4:inst8|counter[22] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.835      ;
+; 0.573 ; Verilog4:inst8|counter[20] ; Verilog4:inst8|counter[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.835      ;
+; 0.578 ; Verilog4:inst2|counter[0]  ; Verilog4:inst2|counter[0]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.841      ;
+; 0.579 ; Verilog4:inst8|counter[0]  ; Verilog4:inst8|counter[0]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.841      ;
+; 0.579 ; Verilog4:inst2|counter[12] ; Verilog4:inst2|counter[12] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.842      ;
+; 0.579 ; Verilog4:inst2|counter[3]  ; Verilog4:inst2|counter[3]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.842      ;
+; 0.580 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[0]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.841      ;
+; 0.580 ; Verilog4:inst8|counter[12] ; Verilog4:inst8|counter[12] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.842      ;
+; 0.580 ; Verilog4:inst8|counter[3]  ; Verilog4:inst8|counter[3]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.842      ;
+; 0.580 ; Verilog4:inst2|counter[2]  ; Verilog4:inst2|counter[2]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.843      ;
+; 0.581 ; Verilog4:inst8|counter[2]  ; Verilog4:inst8|counter[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.843      ;
+; 0.581 ; Verilog4:inst2|counter[11] ; Verilog4:inst2|counter[11] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.844      ;
+; 0.581 ; Verilog4:inst2|counter[24] ; Verilog4:inst2|counter[24] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.844      ;
+; 0.581 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.843      ;
+; 0.582 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[19] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.843      ;
+; 0.582 ; Verilog4:inst8|counter[11] ; Verilog4:inst8|counter[11] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.844      ;
+; 0.582 ; Verilog4:inst8|counter[24] ; Verilog4:inst8|counter[24] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.844      ;
+; 0.582 ; Verilog4:inst2|counter[1]  ; Verilog4:inst2|counter[1]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.845      ;
+; 0.582 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[13] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.844      ;
+; 0.582 ; Verilog4:inst1|counter[24] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.844      ;
+; 0.583 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[13] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.844      ;
+; 0.583 ; Verilog4:inst7|counter[24] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.844      ;
+; 0.583 ; Verilog4:inst8|counter[1]  ; Verilog4:inst8|counter[1]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.845      ;
+; 0.583 ; Verilog4:inst2|counter[5]  ; Verilog4:inst2|counter[5]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.846      ;
+; 0.584 ; Verilog4:inst8|counter[5]  ; Verilog4:inst8|counter[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.846      ;
+; 0.584 ; Verilog4:inst2|counter[23] ; Verilog4:inst2|counter[23] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.847      ;
+; 0.584 ; Verilog4:inst2|counter[14] ; Verilog4:inst2|counter[14] ; clk          ; clk         ; 0.000        ; 0.072      ; 0.847      ;
+; 0.584 ; Verilog4:inst2|counter[6]  ; Verilog4:inst2|counter[6]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.847      ;
+; 0.584 ; Verilog4:inst2|counter[4]  ; Verilog4:inst2|counter[4]  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.847      ;
+; 0.584 ; Verilog4:inst1|counter[5]  ; Verilog4:inst1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.846      ;
+; 0.585 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[5]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.846      ;
+; 0.585 ; Verilog4:inst8|counter[23] ; Verilog4:inst8|counter[23] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst8|counter[6]  ; Verilog4:inst8|counter[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst8|counter[4]  ; Verilog4:inst8|counter[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst1|counter[23] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[14] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst1|counter[6]  ; Verilog4:inst1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.585 ; Verilog4:inst1|counter[4]  ; Verilog4:inst1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.847      ;
+; 0.586 ; Verilog4:inst7|counter[23] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.847      ;
+; 0.586 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.847      ;
+; 0.586 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[14] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.847      ;
+; 0.586 ; Verilog4:inst7|counter[6]  ; Verilog4:inst7|counter[6]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.847      ;
+; 0.586 ; Verilog4:inst7|counter[4]  ; Verilog4:inst7|counter[4]  ; clk          ; clk         ; 0.000        ; 0.070      ; 0.847      ;
+; 0.586 ; Verilog4:inst1|counter[20] ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.848      ;
+; 0.587 ; Verilog4:inst7|counter[20] ; Verilog4:inst7|counter[20] ; clk          ; clk         ; 0.000        ; 0.070      ; 0.848      ;
+; 0.587 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 0.000        ; 0.071      ; 0.849      ;
+; 0.587 ; Verilog4:inst1|counter[2]  ; Verilog4:inst1|counter[2]  ; clk          ; clk         ; 0.000        ; 0.071      ; 0.849      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                       ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type       ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate  ; clk   ; Rise       ; clk                        ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[4]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[5]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[6]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[7]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[8]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[9]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[0]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[10] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[11] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[12] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[13] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[14] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[15] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[16] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[17] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[18] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[19] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[1]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[20] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[21] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[22] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[23] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[24] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[25] ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[2]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[3]  ;
+; -1.285 ; 1.000        ; 2.285          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[4]  ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; x0        ; clk        ; 2.316 ; 2.489 ; Rise       ; clk             ;
+; x1        ; clk        ; 1.411 ; 1.627 ; Rise       ; clk             ;
+; x2        ; clk        ; 1.139 ; 1.381 ; Rise       ; clk             ;
+; x3        ; clk        ; 2.339 ; 2.525 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; x0        ; clk        ; -1.591 ; -1.768 ; Rise       ; clk             ;
+; x1        ; clk        ; -1.019 ; -1.224 ; Rise       ; clk             ;
+; x2        ; clk        ; -0.461 ; -0.706 ; Rise       ; clk             ;
+; x3        ; clk        ; -1.637 ; -1.826 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 8.649 ; 8.874 ; Rise       ; clk             ;
+; s0        ; clk        ; 6.992 ; 6.909 ; Rise       ; clk             ;
+; s1        ; clk        ; 6.968 ; 6.876 ; Rise       ; clk             ;
+; s2        ; clk        ; 8.212 ; 8.065 ; Rise       ; clk             ;
+; s3        ; clk        ; 7.597 ; 7.491 ; Rise       ; clk             ;
+; s4        ; clk        ; 8.894 ; 8.664 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 8.329 ; 8.545 ; Rise       ; clk             ;
+; s0        ; clk        ; 6.737 ; 6.657 ; Rise       ; clk             ;
+; s1        ; clk        ; 6.714 ; 6.624 ; Rise       ; clk             ;
+; s2        ; clk        ; 7.911 ; 7.768 ; Rise       ; clk             ;
+; s3        ; clk        ; 7.320 ; 7.218 ; Rise       ; clk             ;
+; s4        ; clk        ; 8.564 ; 8.342 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -2.006 ; -159.201          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.163 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -216.705                        ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -2.006 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.947      ;
+; -2.005 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.946      ;
+; -2.001 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.948      ;
+; -1.985 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.933      ;
+; -1.974 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.921      ;
+; -1.960 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.908      ;
+; -1.960 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.916      ;
+; -1.959 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.915      ;
+; -1.957 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.904      ;
+; -1.943 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.891      ;
+; -1.942 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.883      ;
+; -1.941 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.882      ;
+; -1.938 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.879      ;
+; -1.937 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.884      ;
+; -1.937 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.878      ;
+; -1.933 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.880      ;
+; -1.924 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.865      ;
+; -1.924 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.865      ;
+; -1.921 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.869      ;
+; -1.920 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.868      ;
+; -1.917 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.865      ;
+; -1.915 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.856      ;
+; -1.910 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.857      ;
+; -1.906 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.853      ;
+; -1.904 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.845      ;
+; -1.902 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.849      ;
+; -1.896 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.844      ;
+; -1.896 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.852      ;
+; -1.895 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.851      ;
+; -1.893 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.840      ;
+; -1.892 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.840      ;
+; -1.892 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.848      ;
+; -1.891 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.847      ;
+; -1.889 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.836      ;
+; -1.879 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.827      ;
+; -1.876 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.832      ;
+; -1.876 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.832      ;
+; -1.875 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.823      ;
+; -1.874 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.815      ;
+; -1.873 ; Verilog4:inst2|counter[19] ; inst                       ; clk          ; clk         ; 1.000        ; -0.077     ; 2.783      ;
+; -1.873 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.814      ;
+; -1.870 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.811      ;
+; -1.870 ; Verilog4:inst2|counter[22] ; inst                       ; clk          ; clk         ; 1.000        ; -0.077     ; 2.780      ;
+; -1.869 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.816      ;
+; -1.869 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.810      ;
+; -1.865 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.812      ;
+; -1.860 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.801      ;
+; -1.860 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.816      ;
+; -1.860 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.801      ;
+; -1.859 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.800      ;
+; -1.856 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.797      ;
+; -1.856 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.804      ;
+; -1.856 ; Verilog4:inst1|counter[1]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.797      ;
+; -1.853 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.801      ;
+; -1.852 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.800      ;
+; -1.851 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.792      ;
+; -1.849 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.797      ;
+; -1.847 ; Verilog4:inst1|counter[0]  ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.788      ;
+; -1.842 ; Verilog4:inst1|counter[6]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.783      ;
+; -1.842 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.789      ;
+; -1.841 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.797      ;
+; -1.840 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.781      ;
+; -1.838 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.785      ;
+; -1.838 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.785      ;
+; -1.836 ; Verilog4:inst1|counter[11] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.777      ;
+; -1.834 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.781      ;
+; -1.828 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.769      ;
+; -1.828 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.776      ;
+; -1.828 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.784      ;
+; -1.827 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.783      ;
+; -1.825 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.772      ;
+; -1.824 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.772      ;
+; -1.824 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.780      ;
+; -1.823 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.779      ;
+; -1.821 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.768      ;
+; -1.813 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.769      ;
+; -1.812 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.768      ;
+; -1.812 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.768      ;
+; -1.811 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[22] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.759      ;
+; -1.810 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.757      ;
+; -1.809 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.765      ;
+; -1.808 ; Verilog4:inst7|counter[3]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.764      ;
+; -1.808 ; Verilog4:inst7|counter[1]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.764      ;
+; -1.807 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.041     ; 2.753      ;
+; -1.807 ; Verilog4:inst7|counter[22] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.755      ;
+; -1.806 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.747      ;
+; -1.805 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.746      ;
+; -1.804 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 1.000        ; -0.041     ; 2.750      ;
+; -1.803 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.759      ;
+; -1.802 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.743      ;
+; -1.801 ; Verilog4:inst2|counter[11] ; inst                       ; clk          ; clk         ; 1.000        ; -0.076     ; 2.712      ;
+; -1.801 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.748      ;
+; -1.801 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.742      ;
+; -1.800 ; Verilog4:inst1|counter[7]  ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.741      ;
+; -1.797 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 1.000        ; -0.040     ; 2.744      ;
+; -1.796 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 1.000        ; -0.039     ; 2.744      ;
+; -1.796 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.752      ;
+; -1.795 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.736      ;
+; -1.792 ; Verilog4:inst1|counter[3]  ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 1.000        ; -0.046     ; 2.733      ;
+; -1.792 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 1.000        ; -0.031     ; 2.748      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.163 ; inst6                      ; inst6                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.163 ; inst5                      ; inst5                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.163 ; inst4                      ; inst4                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.163 ; inst3                      ; inst3                      ; clk          ; clk         ; 0.000        ; 0.040      ; 0.307      ;
+; 0.180 ; Verilog4:inst2|counter[25] ; Verilog4:inst2|counter[25] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.325      ;
+; 0.181 ; Verilog4:inst8|counter[25] ; Verilog4:inst8|counter[25] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.325      ;
+; 0.181 ; Verilog4:inst1|counter[25] ; Verilog4:inst1|counter[25] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.325      ;
+; 0.182 ; Verilog4:inst7|counter[25] ; Verilog4:inst7|counter[25] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.325      ;
+; 0.272 ; Verilog4:inst2|counter[13] ; Verilog4:inst2|counter[13] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.417      ;
+; 0.272 ; Verilog4:inst2|counter[10] ; Verilog4:inst2|counter[10] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.418      ;
+; 0.272 ; Verilog4:inst2|counter[9]  ; Verilog4:inst2|counter[9]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.418      ;
+; 0.273 ; Verilog4:inst8|counter[13] ; Verilog4:inst8|counter[13] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.417      ;
+; 0.273 ; Verilog4:inst2|counter[19] ; Verilog4:inst2|counter[19] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
+; 0.273 ; Verilog4:inst2|counter[18] ; Verilog4:inst2|counter[18] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
+; 0.273 ; Verilog4:inst2|counter[15] ; Verilog4:inst2|counter[15] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.418      ;
+; 0.273 ; Verilog4:inst2|counter[8]  ; Verilog4:inst2|counter[8]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.419      ;
+; 0.273 ; Verilog4:inst2|counter[7]  ; Verilog4:inst2|counter[7]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.419      ;
+; 0.273 ; Verilog4:inst1|counter[12] ; Verilog4:inst1|counter[12] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.417      ;
+; 0.274 ; Verilog4:inst7|counter[12] ; Verilog4:inst7|counter[12] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.417      ;
+; 0.274 ; Verilog4:inst7|counter[11] ; Verilog4:inst7|counter[11] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.417      ;
+; 0.274 ; Verilog4:inst8|counter[19] ; Verilog4:inst8|counter[19] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst8|counter[16] ; Verilog4:inst8|counter[16] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst8|counter[15] ; Verilog4:inst8|counter[15] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst8|counter[14] ; Verilog4:inst8|counter[14] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst8|counter[10] ; Verilog4:inst8|counter[10] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst8|counter[9]  ; Verilog4:inst8|counter[9]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst2|counter[21] ; Verilog4:inst2|counter[21] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
+; 0.274 ; Verilog4:inst2|counter[17] ; Verilog4:inst2|counter[17] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
+; 0.274 ; Verilog4:inst2|counter[16] ; Verilog4:inst2|counter[16] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.419      ;
+; 0.274 ; Verilog4:inst1|counter[16] ; Verilog4:inst1|counter[16] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst1|counter[15] ; Verilog4:inst1|counter[15] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst1|counter[10] ; Verilog4:inst1|counter[10] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.274 ; Verilog4:inst1|counter[7]  ; Verilog4:inst1|counter[7]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.418      ;
+; 0.275 ; Verilog4:inst7|counter[16] ; Verilog4:inst7|counter[16] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.418      ;
+; 0.275 ; Verilog4:inst7|counter[15] ; Verilog4:inst7|counter[15] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.418      ;
+; 0.275 ; Verilog4:inst7|counter[10] ; Verilog4:inst7|counter[10] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.418      ;
+; 0.275 ; Verilog4:inst7|counter[7]  ; Verilog4:inst7|counter[7]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.418      ;
+; 0.275 ; Verilog4:inst8|counter[21] ; Verilog4:inst8|counter[21] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst8|counter[18] ; Verilog4:inst8|counter[18] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst8|counter[17] ; Verilog4:inst8|counter[17] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst8|counter[8]  ; Verilog4:inst8|counter[8]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst8|counter[7]  ; Verilog4:inst8|counter[7]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst2|counter[20] ; Verilog4:inst2|counter[20] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.420      ;
+; 0.275 ; Verilog4:inst1|counter[18] ; Verilog4:inst1|counter[18] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst1|counter[17] ; Verilog4:inst1|counter[17] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst1|counter[9]  ; Verilog4:inst1|counter[9]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.275 ; Verilog4:inst1|counter[8]  ; Verilog4:inst1|counter[8]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.419      ;
+; 0.276 ; Verilog4:inst7|counter[18] ; Verilog4:inst7|counter[18] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.419      ;
+; 0.276 ; Verilog4:inst7|counter[17] ; Verilog4:inst7|counter[17] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.419      ;
+; 0.276 ; Verilog4:inst7|counter[9]  ; Verilog4:inst7|counter[9]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.419      ;
+; 0.276 ; Verilog4:inst7|counter[8]  ; Verilog4:inst7|counter[8]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.419      ;
+; 0.276 ; Verilog4:inst8|counter[20] ; Verilog4:inst8|counter[20] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.420      ;
+; 0.276 ; Verilog4:inst2|counter[22] ; Verilog4:inst2|counter[22] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.421      ;
+; 0.277 ; Verilog4:inst8|counter[22] ; Verilog4:inst8|counter[22] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.421      ;
+; 0.278 ; Verilog4:inst2|counter[3]  ; Verilog4:inst2|counter[3]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.278 ; Verilog4:inst2|counter[0]  ; Verilog4:inst2|counter[0]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.279 ; Verilog4:inst2|counter[12] ; Verilog4:inst2|counter[12] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.279 ; Verilog4:inst2|counter[11] ; Verilog4:inst2|counter[11] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.279 ; Verilog4:inst2|counter[2]  ; Verilog4:inst2|counter[2]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.280 ; Verilog4:inst8|counter[3]  ; Verilog4:inst8|counter[3]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.424      ;
+; 0.280 ; Verilog4:inst8|counter[0]  ; Verilog4:inst8|counter[0]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.424      ;
+; 0.280 ; Verilog4:inst2|counter[5]  ; Verilog4:inst2|counter[5]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.280 ; Verilog4:inst2|counter[4]  ; Verilog4:inst2|counter[4]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.280 ; Verilog4:inst2|counter[1]  ; Verilog4:inst2|counter[1]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.426      ;
+; 0.281 ; Verilog4:inst7|counter[0]  ; Verilog4:inst7|counter[0]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.424      ;
+; 0.281 ; Verilog4:inst8|counter[12] ; Verilog4:inst8|counter[12] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.425      ;
+; 0.281 ; Verilog4:inst8|counter[11] ; Verilog4:inst8|counter[11] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.425      ;
+; 0.281 ; Verilog4:inst8|counter[2]  ; Verilog4:inst8|counter[2]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.425      ;
+; 0.281 ; Verilog4:inst2|counter[14] ; Verilog4:inst2|counter[14] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.281 ; Verilog4:inst2|counter[6]  ; Verilog4:inst2|counter[6]  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.427      ;
+; 0.281 ; Verilog4:inst2|counter[24] ; Verilog4:inst2|counter[24] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.426      ;
+; 0.281 ; Verilog4:inst1|counter[19] ; Verilog4:inst1|counter[19] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.425      ;
+; 0.281 ; Verilog4:inst1|counter[13] ; Verilog4:inst1|counter[13] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.425      ;
+; 0.282 ; Verilog4:inst7|counter[19] ; Verilog4:inst7|counter[19] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.425      ;
+; 0.282 ; Verilog4:inst7|counter[13] ; Verilog4:inst7|counter[13] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.425      ;
+; 0.282 ; Verilog4:inst8|counter[5]  ; Verilog4:inst8|counter[5]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst8|counter[4]  ; Verilog4:inst8|counter[4]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst8|counter[1]  ; Verilog4:inst8|counter[1]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst8|counter[24] ; Verilog4:inst8|counter[24] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst2|counter[23] ; Verilog4:inst2|counter[23] ; clk          ; clk         ; 0.000        ; 0.041      ; 0.427      ;
+; 0.282 ; Verilog4:inst1|counter[21] ; Verilog4:inst1|counter[21] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst1|counter[14] ; Verilog4:inst1|counter[14] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst1|counter[5]  ; Verilog4:inst1|counter[5]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst1|counter[4]  ; Verilog4:inst1|counter[4]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.282 ; Verilog4:inst1|counter[24] ; Verilog4:inst1|counter[24] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.426      ;
+; 0.283 ; Verilog4:inst7|counter[21] ; Verilog4:inst7|counter[21] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.426      ;
+; 0.283 ; Verilog4:inst7|counter[14] ; Verilog4:inst7|counter[14] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.426      ;
+; 0.283 ; Verilog4:inst7|counter[5]  ; Verilog4:inst7|counter[5]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.426      ;
+; 0.283 ; Verilog4:inst7|counter[4]  ; Verilog4:inst7|counter[4]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.426      ;
+; 0.283 ; Verilog4:inst7|counter[24] ; Verilog4:inst7|counter[24] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.426      ;
+; 0.283 ; Verilog4:inst8|counter[23] ; Verilog4:inst8|counter[23] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.427      ;
+; 0.283 ; Verilog4:inst8|counter[6]  ; Verilog4:inst8|counter[6]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.427      ;
+; 0.283 ; Verilog4:inst1|counter[23] ; Verilog4:inst1|counter[23] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.427      ;
+; 0.283 ; Verilog4:inst1|counter[20] ; Verilog4:inst1|counter[20] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.427      ;
+; 0.283 ; Verilog4:inst1|counter[6]  ; Verilog4:inst1|counter[6]  ; clk          ; clk         ; 0.000        ; 0.040      ; 0.427      ;
+; 0.284 ; Verilog4:inst7|counter[23] ; Verilog4:inst7|counter[23] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.427      ;
+; 0.284 ; Verilog4:inst7|counter[20] ; Verilog4:inst7|counter[20] ; clk          ; clk         ; 0.000        ; 0.039      ; 0.427      ;
+; 0.284 ; Verilog4:inst7|counter[6]  ; Verilog4:inst7|counter[6]  ; clk          ; clk         ; 0.000        ; 0.039      ; 0.427      ;
+; 0.284 ; Verilog4:inst1|counter[22] ; Verilog4:inst1|counter[22] ; clk          ; clk         ; 0.000        ; 0.040      ; 0.428      ;
+; 0.284 ; inst6                      ; inst                       ; clk          ; clk         ; 0.000        ; 0.040      ; 0.428      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                       ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type       ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate  ; clk   ; Rise       ; clk                        ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[0]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[10] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[11] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[12] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[13] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[14] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[15] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[16] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[17] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[18] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[19] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[1]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[20] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[21] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[22] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[23] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[24] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[25] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[2]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[3]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[4]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[5]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[6]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[7]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[8]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst1|counter[9]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[0]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[10] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[11] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[12] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[13] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[14] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[15] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[16] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[17] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[18] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[19] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[1]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[20] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[21] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[22] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[23] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[24] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[25] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[2]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[3]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[4]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[5]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[6]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[7]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[8]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst2|counter[9]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[0]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[10] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[11] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[12] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[13] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[14] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[15] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[16] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[17] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[18] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[19] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[1]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[20] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[21] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[22] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[23] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[24] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[25] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[2]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[3]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[4]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[5]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[6]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[7]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[8]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst7|counter[9]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[0]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[10] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[11] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[12] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[13] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[14] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[15] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[16] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[17] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[18] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[19] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[1]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[20] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[21] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[22] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[23] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[24] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[25] ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[2]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[3]  ;
+; -1.899 ; 1.000        ; 2.899          ; Min Period ; clk   ; Rise       ; Verilog4:inst8|counter[4]  ;
++--------+--------------+----------------+------------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; x0        ; clk        ; 1.196 ; 1.823 ; Rise       ; clk             ;
+; x1        ; clk        ; 0.719 ; 1.278 ; Rise       ; clk             ;
+; x2        ; clk        ; 0.559 ; 1.107 ; Rise       ; clk             ;
+; x3        ; clk        ; 1.205 ; 1.842 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; x0        ; clk        ; -0.801 ; -1.396 ; Rise       ; clk             ;
+; x1        ; clk        ; -0.496 ; -1.050 ; Rise       ; clk             ;
+; x2        ; clk        ; -0.191 ; -0.711 ; Rise       ; clk             ;
+; x3        ; clk        ; -0.831 ; -1.438 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 5.293 ; 5.062 ; Rise       ; clk             ;
+; s0        ; clk        ; 4.060 ; 4.171 ; Rise       ; clk             ;
+; s1        ; clk        ; 4.051 ; 4.152 ; Rise       ; clk             ;
+; s2        ; clk        ; 4.734 ; 4.924 ; Rise       ; clk             ;
+; s3        ; clk        ; 4.402 ; 4.558 ; Rise       ; clk             ;
+; s4        ; clk        ; 5.058 ; 5.293 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 5.110 ; 4.888 ; Rise       ; clk             ;
+; s0        ; clk        ; 3.924 ; 4.031 ; Rise       ; clk             ;
+; s1        ; clk        ; 3.916 ; 4.013 ; Rise       ; clk             ;
+; s2        ; clk        ; 4.573 ; 4.756 ; Rise       ; clk             ;
+; s3        ; clk        ; 4.256 ; 4.405 ; Rise       ; clk             ;
+; s4        ; clk        ; 4.883 ; 5.109 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.974   ; 0.163 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -4.974   ; 0.163 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -425.819 ; 0.0   ; 0.0      ; 0.0     ; -216.705            ;
+;  clk             ; -425.819 ; 0.000 ; N/A      ; N/A     ; -216.705            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; x0        ; clk        ; 2.589 ; 2.904 ; Rise       ; clk             ;
+; x1        ; clk        ; 1.613 ; 1.938 ; Rise       ; clk             ;
+; x2        ; clk        ; 1.340 ; 1.669 ; Rise       ; clk             ;
+; x3        ; clk        ; 2.601 ; 2.940 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; x0        ; clk        ; -0.801 ; -1.396 ; Rise       ; clk             ;
+; x1        ; clk        ; -0.496 ; -1.050 ; Rise       ; clk             ;
+; x2        ; clk        ; -0.191 ; -0.706 ; Rise       ; clk             ;
+; x3        ; clk        ; -0.831 ; -1.438 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 9.634 ; 9.704 ; Rise       ; clk             ;
+; s0        ; clk        ; 7.729 ; 7.700 ; Rise       ; clk             ;
+; s1        ; clk        ; 7.706 ; 7.650 ; Rise       ; clk             ;
+; s2        ; clk        ; 9.016 ; 8.973 ; Rise       ; clk             ;
+; s3        ; clk        ; 8.361 ; 8.345 ; Rise       ; clk             ;
+; s4        ; clk        ; 9.722 ; 9.653 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; lock      ; clk        ; 5.110 ; 4.888 ; Rise       ; clk             ;
+; s0        ; clk        ; 3.924 ; 4.031 ; Rise       ; clk             ;
+; s1        ; clk        ; 3.916 ; 4.013 ; Rise       ; clk             ;
+; s2        ; clk        ; 4.573 ; 4.756 ; Rise       ; clk             ;
+; s3        ; clk        ; 4.256 ; 4.405 ; Rise       ; clk             ;
+; s4        ; clk        ; 4.883 ; 5.109 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; s0            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; s1            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; s2            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; s3            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; s4            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; lock          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x3                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x1                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x2                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; x0                      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; s0            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; s1            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; s2            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; s3            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; s4            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; lock          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; s0            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; s1            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; s2            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; s3            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; s4            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; lock          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; s0            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; s1            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; s2            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; s3            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; s4            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; lock          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5018     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5018     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Registers Without Clock Pin     ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 104   ; 104  ;
+; Unconstrained Output Ports      ; 6     ; 6    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
+; Unconstrained Reg-to-Reg Paths  ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 10.0 Build 218 06/27/2010 SJ Web Edition
+    Info: Processing started: Sat Oct 05 15:29:56 2019
+Info: Command: quartus_sta clock -c clock
+Info: qsta_default_script.tcl version: #1
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'clock.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clk clk
+Info: No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -4.974
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -4.974      -425.819 clk 
+Info: Worst-case hold slack is 0.384
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.384         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000      -143.065 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -4.324
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -4.324      -370.091 clk 
+Info: Worst-case hold slack is 0.335
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.335         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000      -143.065 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -2.006
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -2.006      -159.201 clk 
+Info: Worst-case hold slack is 0.163
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.163         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000      -216.705 clk 
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 334 megabytes
+    Info: Processing ended: Sat Oct 05 15:29:59 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
