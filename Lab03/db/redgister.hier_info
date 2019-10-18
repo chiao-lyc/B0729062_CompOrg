@@ -1,0 +1,28 @@
+|redgister
+s0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk => inst.CLK
+clk => inst18.CLK
+clk => inst19.CLK
+clk => inst20.CLK
+clk => inst21.CLK
+clk => inst22.CLK
+clk => inst23.CLK
+clk => inst24.CLK
+x0 => inst28.IN0
+load => inst25.IN0
+s1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+x1 => inst31.IN0
+s2 <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+x2 => inst34.IN0
+s3 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+x3 => inst37.IN1
+s4 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+x4 => inst40.IN0
+s5 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+x5 => inst43.IN0
+s6 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+x6 => inst46.IN0
+s7 <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+x7 => inst49.IN0
+
+

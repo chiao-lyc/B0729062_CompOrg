@@ -1,0 +1,77 @@
+Quartus II
+Version 10.0 Build 218 06/27/2010 SJ Web Edition
+13
+1247
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+7447
+# storage
+db|redgister.(1).cnf
+db|redgister.(1).cnf
+# case_insensitive
+# source_file
+|users|user|desktop|quartus|libraries|others|maxplus2|7447.bdf
+86d3a63c39de893667fc24b13bc4239
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+7448
+# storage
+db|redgister.(2).cnf
+db|redgister.(2).cnf
+# case_insensitive
+# source_file
+|users|user|desktop|quartus|libraries|others|maxplus2|7448.bdf
+7d23bacb84fe4aab4666d730ef46f93e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+redgister
+# storage
+db|redgister.(0).cnf
+db|redgister.(0).cnf
+# case_insensitive
+# source_file
+redgister.bdf
+72aaec5d23ec6c17d9bf3a33ac42dc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
