@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/Lab05/simulation/qsim
+vFINAL
+Z1 !s110 1573210851
+!i10b 1
+!s100 _1[[ERMRLe3nhMj:<GaNe2
+IIfXX>UUYh1Q]_I<[N15no0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1573210850
+Z4 8digitalclk.vo
+Z5 Fdigitalclk.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1573210851.000000
+Z8 !s107 digitalclk.vo|
+Z9 !s90 -work|work|digitalclk.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@f@i@n@a@l
+vFINAL_vlg_vec_tst
+R1
+!i10b 1
+!s100 S8Kf9FM@9fUEMmHbcD1nj3
+IQ2h_k:Q;n3I=Y6Pk0D6SK0
+R2
+R0
+w1573210849
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@f@i@n@a@l_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 `QeJDK3iN0<5Q]1ad]6oR1
+IComj8=[BBI_eE[YYi`Oih0
+R2
+R0
+R3
+R4
+R5
+L0 1770
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
