@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'freq_div_1KHz:inst6|clk_out'
+Slack : -2.741
+TNS   : -53.915
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.436
+TNS   : -50.763
+
+Type  : Slow 1200mV 85C Model Hold 'freq_div_1KHz:inst6|clk_out'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'freq_div_1KHz:inst6|clk_out'
+Slack : -1.699
+TNS   : -23.618
+
+Type  : Slow 1200mV 85C Model Removal 'freq_div_1KHz:inst6|clk_out'
+Slack : 1.677
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -40.265
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'freq_div_1KHz:inst6|clk_out'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Slow 1200mV 0C Model Setup 'freq_div_1KHz:inst6|clk_out'
+Slack : -2.479
+TNS   : -47.127
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.132
+TNS   : -43.016
+
+Type  : Slow 1200mV 0C Model Hold 'freq_div_1KHz:inst6|clk_out'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.585
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'freq_div_1KHz:inst6|clk_out'
+Slack : -1.411
+TNS   : -19.946
+
+Type  : Slow 1200mV 0C Model Removal 'freq_div_1KHz:inst6|clk_out'
+Slack : 1.516
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -40.265
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'freq_div_1KHz:inst6|clk_out'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Fast 1200mV 0C Model Setup 'freq_div_1KHz:inst6|clk_out'
+Slack : -0.867
+TNS   : -13.387
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.712
+TNS   : -11.038
+
+Type  : Fast 1200mV 0C Model Hold 'freq_div_1KHz:inst6|clk_out'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'freq_div_1KHz:inst6|clk_out'
+Slack : -0.346
+TNS   : -3.769
+
+Type  : Fast 1200mV 0C Model Removal 'freq_div_1KHz:inst6|clk_out'
+Slack : 0.791
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -33.856
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'freq_div_1KHz:inst6|clk_out'
+Slack : -1.000
+TNS   : -27.000
+
+------------------------------------------------------------
