@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 22 17:54:12 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : RTL
+Top-level Entity Name : RTL
+Family : Cyclone IV E
+Total logic elements : 27
+    Total combinational functions : 27
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 29
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
