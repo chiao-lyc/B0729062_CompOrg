@@ -1,0 +1,26 @@
+module lab_03(A,B,X,Y,clock);
+input X;
+input clock;
+output A,B,Y;
+reg A;
+reg B;
+
+alway@(posedge clock) begin
+{A,B} = 2’b00;
+end
+else begin
+case({A,B,x})
+3’b000: {A,B} = 2’b00;
+3’b001: {A,B} = 2’b01;
+3’b010; {A,B} = 2’b00;
+3’b011; {A,B} = 2’b11;
+3’b100; {A,B} = 2’b00;
+3’b101; {A,B} = 2’b10;
+3’b110; {A,B} = 2’b00;
+3’b111; {A,B} = 2’b10;
+endcase
+end
+end
+assign Y = (A|B)& (~x);
+endmodule
+

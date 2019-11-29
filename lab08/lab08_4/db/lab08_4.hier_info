@@ -1,0 +1,10 @@
+|lab08_4
+X => Mux1.IN2
+T => Mux0.IN3
+T => Mux1.IN3
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+
+

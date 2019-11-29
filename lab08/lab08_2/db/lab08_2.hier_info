@@ -1,0 +1,14 @@
+|lab08_2
+A => X.IN0
+A => Y.IN0
+A => Y.IN0
+A => X.IN0
+B => X.IN1
+B => Y.IN1
+C => X.IN1
+C => X.IN1
+C => Y.IN1
+X <= X.DB_MAX_OUTPUT_PORT_TYPE
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
